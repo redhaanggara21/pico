@@ -5,6 +5,8 @@ pytho -m pip freeze > requirements.txt
 
 bash
 ```
+    python manage.py startapp task
+    pip freeze > requirement.txt
     python manage.py makemigrations
 ```
 
