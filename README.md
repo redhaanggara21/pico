@@ -25,7 +25,7 @@ bash
 - https://pyimagesearch.com/2015/05/11/creating-a-face-detection-api-with-python-and-opencv-in-just-5-minutes/
 - https://github.com/pyplane/django-faceid/blob/main/profiles/views.py
 
-- olah seminggu
+- REF PERWEEK
     - https://github.com/reasonable-productivity/web-back-end
     - https://github.com/reasonable-productivity/web-front-end
     - https://github.com/jaingaurav126?tab=repositories
