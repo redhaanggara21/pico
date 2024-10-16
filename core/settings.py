@@ -22,7 +22,7 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
-
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Set the project base directory
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -55,14 +55,26 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework.authtoken',
+    'rest_framework_nested',
     'rest_framework',
+    'corsheaders',
     'cars',
     'uploads',
     'profiles',
-    'logs'
+    'logs',
+    # 'users',
+    'tasks',
+    # 'projects',
+    # 'lists',
+    # 'utils',
 ]
 
+
+AUTH_USER_MODEL = 'users.User'
+
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

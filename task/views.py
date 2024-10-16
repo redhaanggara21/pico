@@ -1,7 +1,7 @@
 from rest_framework import serializers, viewsets
 from django.contrib.auth import get_user_model
 
-from apps.projects.models import Project
+from core.projects.models import Project
 from .models import Task
 
 

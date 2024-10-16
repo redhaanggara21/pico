@@ -34,7 +34,10 @@ urlpatterns = [
     path('login', login_view, name='login'),
     path('logout', logout_view, name='logout'),
     path('classify', find_user_view, name='classify'),
-
+    path('users/', include('users.urls')),
+    path('tasks/', include('tasks.urls')),
+    path('lists/', include('lists.urls')),
+    path('projects/', include('projects.urls'))
     # path('stream/', include('streamapp.urls'))
     # url(r'^face-detector/', include('../face_detector.urls')),
     # path('face_detection/detect', 'face_detector.views.detect'),

@@ -1,8 +1,8 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 
-from apps.utils.models import Timestamps
-from apps.projects.models import Project
+from core.utils.models import Timestamps
+from core.projects.models import Project
 
 
 class Task(Timestamps, models.Model):

@@ -5,6 +5,8 @@ pytho -m pip freeze > requirements.txt
 
 bash
 ```
+    pip install -r requirements.txt
+    python3 -m venv venvpip
     python manage.py startapp task
     pip freeze > requirement.txt
     python manage.py makemigrations

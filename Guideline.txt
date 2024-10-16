@@ -34,3 +34,5 @@ https://github.com/TheProtonGuy/Django-Blog-Api/tree/main
 https://github.com/TheProtonGuy/DrfTokenAuthentication
 https://github.com/RekhuGopal/PythonHacks
 https://dev.to/ki3ani/building-out-a-notes-app-with-react-and-a-django-rest-api-part-1-5bc5
+https://github.com/SteinOveHelset/invoicely_django
+https://github.com/SteinOveHelset/invoicely_vue
