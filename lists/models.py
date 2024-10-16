@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 
-from core.utils.models import Timestamps
+from utils.models import Timestamps
 
 
 class List(Timestamps, models.Model):

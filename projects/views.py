@@ -3,8 +3,8 @@ from django.contrib.auth import get_user_model
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
-from core.tasks.views import TaskSerializer
-from  core.tasks.models import Task
+from task.views import TaskSerializer
+from task.models import Task
 from .models import Project
 
 

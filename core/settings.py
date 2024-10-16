@@ -63,15 +63,24 @@ INSTALLED_APPS = [
     'uploads',
     'profiles',
     'logs',
-    # 'users',
-    'tasks',
-    # 'projects',
-    # 'lists',
-    # 'utils',
+    'users',
+    'task',
+    'projects',
+    'lists',
+    'utils',
+    'drf_yasg',
 ]
 
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Basic': {
+            'type': 'basic'
+        }
+    }
+}
 
-AUTH_USER_MODEL = 'users.User'
+# AUTH_USER_MODEL = 'users.User'
+# AUTH_USER_MODEL = 'users.User'
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',

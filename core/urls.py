@@ -20,6 +20,26 @@ from django.conf import settings
 from django.conf.urls.static import static
 # from face_detector import views
 
+from rest_framework.schemas import get_schema_view
+from django.views.generic import TemplateView
+from rest_framework import permissions
+from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
+
+
+schema_view = get_schema_view(
+    openapi.Info(
+        title="My API",
+        default_version='v1',
+        description="My API description",
+        terms_of_service="https://www.example.com/terms/",
+        contact=openapi.Contact(email="contact@example.com"),
+        license=openapi.License(name="Awesome License"),
+    ),
+    public=True,
+    permission_classes=(permissions.AllowAny,),
+)
+
 from .views import (
     login_view,
     logout_view,
@@ -35,9 +55,15 @@ urlpatterns = [
     path('logout', logout_view, name='logout'),
     path('classify', find_user_view, name='classify'),
     path('users/', include('users.urls')),
-    path('tasks/', include('tasks.urls')),
+    path('tasks/', include('task.urls')),
     path('lists/', include('lists.urls')),
-    path('projects/', include('projects.urls'))
+    path('projects/', include('projects.urls')),
+    path('docs/', TemplateView.as_view(
+        template_name='docs.html',
+        extra_context={'schema_url':'api_schema'}
+        ), name='swagger-ui'),
+     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     # path('stream/', include('streamapp.urls'))
     # url(r'^face-detector/', include('../face_detector.urls')),
     # path('face_detection/detect', 'face_detector.views.detect'),
